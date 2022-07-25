@@ -36,12 +36,3 @@ class ChainingHashTable:
 
         return None
 
-    # Removes an item with matching key from the hash table.
-    def remove(self, key):
-        # get the bucket list where this item will be removed from.
-        bucket = hash(key) % len(self.table)
-        bucket_list = self.table[bucket]
-
-        for pair in bucket_list:
-            if pair[0] == key:
-                bucket_list.remove([pair[0], pair[1]])
