@@ -2,6 +2,8 @@
 class ChainingHashTable:
     # Constructor with optional initial capacity parameter.
     # Assigns all buckets with an empty list.
+
+        # maybe remove capacity
     def __init__(self, initial_capacity=10):
         # initialize the hash table with empty bucket list entries.
         self.table = []
@@ -36,3 +38,14 @@ class ChainingHashTable:
 
         return None
 
+    # Overloaded string conversion method to create a string
+    # representation of the entire hash table. Each bucket is shown
+    # as a pointer to a list object.
+    def __str__(self):
+        index = 0
+        s =  "   --------\n"
+        for bucket in self.table:
+            s += "%2d:|   ---|-->%s\n" % (index, bucket)
+            index += 1
+        s += "   --------"
+        return s

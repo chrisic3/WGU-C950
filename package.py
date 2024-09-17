@@ -9,4 +9,12 @@ class Package:
         self.mass = mass
         self.notes = notes
         self.status = 'At Hub'
-        self.timestamp = None
+        self.deliverTime = None
+        self.truck = None
+        self.loadTime = None
+
+    def __str__ (self):
+        return "%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s" % (self.id, self.address, self.city,
+                                                          self.state, self.zip, self.deadline,
+                                                          self.mass, self.notes, self.status,
+                                                          self.deliverTime, self.truck, self.loadTime)
